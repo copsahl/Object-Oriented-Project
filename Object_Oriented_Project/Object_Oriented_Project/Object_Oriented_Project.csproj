@@ -46,6 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DisplayRoastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayRoastForm.Designer.cs">
+      <DependentUpon>DisplayRoastForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IUserRepo.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +71,13 @@
     <Compile Include="Recipe.cs" />
     <Compile Include="Roast.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UserRepo.cs" />
+    <EmbeddedResource Include="DisplayRoastForm.resx">
+      <DependentUpon>DisplayRoastForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mainWindow.resx">
       <DependentUpon>mainWindow.cs</DependentUpon>
     </EmbeddedResource>

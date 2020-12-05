@@ -1,0 +1,12 @@
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\bin\Debug\Object_Oriented_Project.exe.config
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\bin\Debug\Object_Oriented_Project.exe
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\bin\Debug\Object_Oriented_Project.pdb
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.csprojAssemblyReference.cache
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.DisplayRoastForm.resources
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.Login.resources
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.mainWindow.resources
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.Properties.Resources.resources
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.csproj.GenerateResource.cache
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.csproj.CoreCompileInputs.cache
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.exe
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.pdb

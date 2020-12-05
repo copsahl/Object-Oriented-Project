@@ -29,43 +29,38 @@
         private void InitializeComponent()
         {
             this.newRecipeButton = new System.Windows.Forms.Button();
-            this.modifyRecipeButton = new System.Windows.Forms.Button();
-            this.dataGridDisplay = new System.Windows.Forms.DataGridView();
+            this.recipeGridDisplay = new System.Windows.Forms.DataGridView();
             this.currentUserLabel = new System.Windows.Forms.Label();
             this.currentUserTextBox = new System.Windows.Forms.TextBox();
             this.newRoastButton = new System.Windows.Forms.Button();
-            this.dataGridLabel = new System.Windows.Forms.Label();
             this.viewRecipeButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridDisplay)).BeginInit();
+            this.viewRoastButton = new System.Windows.Forms.Button();
+            this.roastGridDisplay = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.recipeGridDisplay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roastGridDisplay)).BeginInit();
             this.SuspendLayout();
             // 
             // newRecipeButton
             // 
-            this.newRecipeButton.Location = new System.Drawing.Point(24, 357);
+            this.newRecipeButton.Location = new System.Drawing.Point(12, 357);
             this.newRecipeButton.Name = "newRecipeButton";
             this.newRecipeButton.Size = new System.Drawing.Size(108, 46);
             this.newRecipeButton.TabIndex = 0;
             this.newRecipeButton.Text = "New Recipe";
             this.newRecipeButton.UseVisualStyleBackColor = true;
             // 
-            // modifyRecipeButton
+            // recipeGridDisplay
             // 
-            this.modifyRecipeButton.Location = new System.Drawing.Point(457, 357);
-            this.modifyRecipeButton.Name = "modifyRecipeButton";
-            this.modifyRecipeButton.Size = new System.Drawing.Size(108, 46);
-            this.modifyRecipeButton.TabIndex = 1;
-            this.modifyRecipeButton.Text = "Modify Recipe";
-            this.modifyRecipeButton.UseVisualStyleBackColor = true;
-            // 
-            // dataGridDisplay
-            // 
-            this.dataGridDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridDisplay.Location = new System.Drawing.Point(24, 71);
-            this.dataGridDisplay.Name = "dataGridDisplay";
-            this.dataGridDisplay.RowHeadersWidth = 51;
-            this.dataGridDisplay.RowTemplate.Height = 24;
-            this.dataGridDisplay.Size = new System.Drawing.Size(714, 259);
-            this.dataGridDisplay.TabIndex = 3;
+            this.recipeGridDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.recipeGridDisplay.Location = new System.Drawing.Point(12, 71);
+            this.recipeGridDisplay.Name = "recipeGridDisplay";
+            this.recipeGridDisplay.RowHeadersWidth = 51;
+            this.recipeGridDisplay.RowTemplate.Height = 24;
+            this.recipeGridDisplay.Size = new System.Drawing.Size(323, 259);
+            this.recipeGridDisplay.TabIndex = 3;
+            this.recipeGridDisplay.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridDisplay_CellContentClick);
             // 
             // currentUserLabel
             // 
@@ -85,48 +80,80 @@
             // 
             // newRoastButton
             // 
-            this.newRoastButton.Location = new System.Drawing.Point(239, 357);
+            this.newRoastButton.Location = new System.Drawing.Point(429, 357);
             this.newRoastButton.Name = "newRoastButton";
             this.newRoastButton.Size = new System.Drawing.Size(108, 46);
             this.newRoastButton.TabIndex = 6;
             this.newRoastButton.Text = "New Roast";
             this.newRoastButton.UseVisualStyleBackColor = true;
             // 
-            // dataGridLabel
-            // 
-            this.dataGridLabel.AutoSize = true;
-            this.dataGridLabel.Location = new System.Drawing.Point(21, 38);
-            this.dataGridLabel.Name = "dataGridLabel";
-            this.dataGridLabel.Size = new System.Drawing.Size(39, 17);
-            this.dataGridLabel.TabIndex = 7;
-            this.dataGridLabel.Text = "EDIT";
-            // 
             // viewRecipeButton
             // 
-            this.viewRecipeButton.Location = new System.Drawing.Point(630, 357);
+            this.viewRecipeButton.Location = new System.Drawing.Point(227, 357);
             this.viewRecipeButton.Name = "viewRecipeButton";
             this.viewRecipeButton.Size = new System.Drawing.Size(108, 46);
             this.viewRecipeButton.TabIndex = 8;
             this.viewRecipeButton.Text = "View Recipe";
             this.viewRecipeButton.UseVisualStyleBackColor = true;
             // 
+            // viewRoastButton
+            // 
+            this.viewRoastButton.Location = new System.Drawing.Point(644, 357);
+            this.viewRoastButton.Name = "viewRoastButton";
+            this.viewRoastButton.Size = new System.Drawing.Size(108, 46);
+            this.viewRoastButton.TabIndex = 9;
+            this.viewRoastButton.Text = "View Roast";
+            this.viewRoastButton.UseVisualStyleBackColor = true;
+            // 
+            // roastGridDisplay
+            // 
+            this.roastGridDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.roastGridDisplay.Location = new System.Drawing.Point(429, 71);
+            this.roastGridDisplay.Name = "roastGridDisplay";
+            this.roastGridDisplay.RowHeadersWidth = 51;
+            this.roastGridDisplay.RowTemplate.Height = 24;
+            this.roastGridDisplay.Size = new System.Drawing.Size(323, 259);
+            this.roastGridDisplay.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 17);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Recipe(s)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(426, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 17);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Roast(s)";
+            // 
             // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 432);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.roastGridDisplay);
+            this.Controls.Add(this.viewRoastButton);
             this.Controls.Add(this.viewRecipeButton);
-            this.Controls.Add(this.dataGridLabel);
             this.Controls.Add(this.newRoastButton);
             this.Controls.Add(this.currentUserTextBox);
             this.Controls.Add(this.currentUserLabel);
-            this.Controls.Add(this.dataGridDisplay);
-            this.Controls.Add(this.modifyRecipeButton);
+            this.Controls.Add(this.recipeGridDisplay);
             this.Controls.Add(this.newRecipeButton);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "mainWindow";
             this.Text = "Coffee Logger";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridDisplay)).EndInit();
+            this.Load += new System.EventHandler(this.mainWindow_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.recipeGridDisplay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roastGridDisplay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,13 +162,15 @@
         #endregion
 
         private System.Windows.Forms.Button newRecipeButton;
-        private System.Windows.Forms.Button modifyRecipeButton;
-        private System.Windows.Forms.DataGridView dataGridDisplay;
+        private System.Windows.Forms.DataGridView recipeGridDisplay;
         private System.Windows.Forms.Label currentUserLabel;
         private System.Windows.Forms.TextBox currentUserTextBox;
         private System.Windows.Forms.Button newRoastButton;
-        private System.Windows.Forms.Label dataGridLabel;
         private System.Windows.Forms.Button viewRecipeButton;
+        private System.Windows.Forms.Button viewRoastButton;
+        private System.Windows.Forms.DataGridView roastGridDisplay;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
