@@ -15,6 +15,7 @@ namespace Object_Oriented_Project
     {
         public Recipe GlobalRecipe;
         public User CurrentUser;
+        public RoastInterface MyRoastInterface = new RoastInterface();
         public FormDisplayRecipe(Recipe SelectedRecipe, User currUser)
         {
             InitializeComponent();
@@ -31,7 +32,15 @@ namespace Object_Oriented_Project
         private void FormDisplayRecipe_Load(object sender, EventArgs e)
         {
             RecipeLabel.Text = GlobalRecipe.Name;
-            roastDisplay.Text = GlobalRecipe.RoastUsed;
+            if(!CurrentUser.UserRoasts.Contains(MyRoastInterface.GetRoastByBean(CurrentUser.UserRoasts, GlobalRecipe.RoastUsed)))
+            {
+                roastDisplay.Text = "Roast not found!";
+            }
+            else
+            {
+                roastDisplay.Text = GlobalRecipe.RoastUsed;
+
+            }
             creamerDisplay.Text = GlobalRecipe.CreamerUsed;
 
             roastDisplay.Enabled = false;

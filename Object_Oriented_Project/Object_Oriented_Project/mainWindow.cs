@@ -14,6 +14,7 @@ namespace Object_Oriented_Project
     {
         UserRepo MyUserRepo = new UserRepo();
         RecipeInterface MyRecipeInterface = new RecipeInterface();
+        RoastInterface MyRoastInterface = new RoastInterface();
         User CurrentUser = new User();
 
         public mainWindow()
@@ -36,6 +37,11 @@ namespace Object_Oriented_Project
             foreach(Recipe r in CurrentUser.UserRecipes)
             {
                 recipeListBox.Items.Add(r.Name);
+            }
+
+            foreach(Roast r in CurrentUser.UserRoasts)
+            {
+                roastListBox.Items.Add(r.Bean);
             }
 
         }
@@ -75,6 +81,59 @@ namespace Object_Oriented_Project
                 }
             }
            
+        }
+
+        private void viewRoastButton_Click(object sender, EventArgs e)
+        {
+            if (roastListBox.Items.Count != 0)
+            {
+                var RoastName = roastListBox.GetItemText(roastListBox.SelectedItem);
+                if (RoastName == null)
+                {
+                    MessageBox.Show("Failed to get selected roast.", "Alert!");
+                }
+                else
+                {
+                    Roast selectedRoast = MyRoastInterface.GetRoastByBean(CurrentUser.UserRoasts, RoastName);
+                    if (selectedRoast == null)
+                    {
+                        MessageBox.Show("Failed to get selected recipe.", "Alert!");
+                    }
+                    else
+                    {
+                        FormDisplayRoast displayRoast = new FormDisplayRoast(selectedRoast, CurrentUser);
+                        var ans = displayRoast.ShowDialog();
+                        if (ans == DialogResult.Yes)
+                        {
+                            CurrentUser.UserRoasts.Remove(selectedRoast);
+                            roastListBox.Items.Remove(RoastName);
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+        private void newRoastButton_Click(object sender, EventArgs e)
+        {
+            FormAddRoast addRoast = new FormAddRoast(CurrentUser);
+            var x = addRoast.ShowDialog();
+            if(x == DialogResult.Yes)
+            {
+                roastListBox.Items.Add(CurrentUser.UserRoasts[CurrentUser.UserRoasts.Count() - 1].Bean);
+
+            }
+        }
+
+        private void newRecipeButton_Click(object sender, EventArgs e)
+        {
+            FormAddRecipe addRecipe = new FormAddRecipe(CurrentUser);
+            var x = addRecipe.ShowDialog();
+            if(x == DialogResult.Yes)
+            {
+                recipeListBox.Items.Add(CurrentUser.UserRecipes[CurrentUser.UserRecipes.Count() - 1].Name);
+            }
         }
     }
 }

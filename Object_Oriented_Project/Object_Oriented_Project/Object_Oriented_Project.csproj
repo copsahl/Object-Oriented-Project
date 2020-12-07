@@ -53,13 +53,32 @@
     <Compile Include="DisplayRoastForm.Designer.cs">
       <DependentUpon>DisplayRoastForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddRecipe.Designer.cs">
+      <DependentUpon>FormAddRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddRoast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddRoast.Designer.cs">
+      <DependentUpon>FormAddRoast.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDisplayRecipe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDisplayRecipe.Designer.cs">
       <DependentUpon>FormDisplayRecipe.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDisplayRoast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDisplayRoast.Designer.cs">
+      <DependentUpon>FormDisplayRoast.cs</DependentUpon>
+    </Compile>
     <Compile Include="IRecipe.cs" />
+    <Compile Include="IRoast.cs" />
     <Compile Include="IUserRepo.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -79,13 +98,23 @@
     <Compile Include="Recipe.cs" />
     <Compile Include="RecipeInterface.cs" />
     <Compile Include="Roast.cs" />
+    <Compile Include="RoastInterface.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserRepo.cs" />
     <EmbeddedResource Include="DisplayRoastForm.resx">
       <DependentUpon>DisplayRoastForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAddRecipe.resx">
+      <DependentUpon>FormAddRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddRoast.resx">
+      <DependentUpon>FormAddRoast.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDisplayRecipe.resx">
       <DependentUpon>FormDisplayRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDisplayRoast.resx">
+      <DependentUpon>FormDisplayRoast.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

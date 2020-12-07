@@ -11,3 +11,6 @@ C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Obje
 C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.exe
 C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.pdb
 C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.FormDisplayRecipe.resources
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.FormDisplayRoast.resources
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.FormAddRoast.resources
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.FormAddRecipe.resources

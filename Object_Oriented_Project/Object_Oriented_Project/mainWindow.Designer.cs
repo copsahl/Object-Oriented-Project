@@ -34,11 +34,10 @@
             this.newRoastButton = new System.Windows.Forms.Button();
             this.viewRecipeButton = new System.Windows.Forms.Button();
             this.viewRoastButton = new System.Windows.Forms.Button();
-            this.roastGridDisplay = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.recipeListBox = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.roastGridDisplay)).BeginInit();
+            this.roastListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // newRecipeButton
@@ -49,6 +48,7 @@
             this.newRecipeButton.TabIndex = 0;
             this.newRecipeButton.Text = "New Recipe";
             this.newRecipeButton.UseVisualStyleBackColor = true;
+            this.newRecipeButton.Click += new System.EventHandler(this.newRecipeButton_Click);
             // 
             // currentUserLabel
             // 
@@ -74,6 +74,7 @@
             this.newRoastButton.TabIndex = 6;
             this.newRoastButton.Text = "New Roast";
             this.newRoastButton.UseVisualStyleBackColor = true;
+            this.newRoastButton.Click += new System.EventHandler(this.newRoastButton_Click);
             // 
             // viewRecipeButton
             // 
@@ -93,16 +94,7 @@
             this.viewRoastButton.TabIndex = 9;
             this.viewRoastButton.Text = "View Roast";
             this.viewRoastButton.UseVisualStyleBackColor = true;
-            // 
-            // roastGridDisplay
-            // 
-            this.roastGridDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.roastGridDisplay.Location = new System.Drawing.Point(429, 71);
-            this.roastGridDisplay.Name = "roastGridDisplay";
-            this.roastGridDisplay.RowHeadersWidth = 51;
-            this.roastGridDisplay.RowTemplate.Height = 24;
-            this.roastGridDisplay.Size = new System.Drawing.Size(323, 259);
-            this.roastGridDisplay.TabIndex = 10;
+            this.viewRoastButton.Click += new System.EventHandler(this.viewRoastButton_Click);
             // 
             // label1
             // 
@@ -131,15 +123,24 @@
             this.recipeListBox.Size = new System.Drawing.Size(323, 276);
             this.recipeListBox.TabIndex = 13;
             // 
+            // roastListBox
+            // 
+            this.roastListBox.FormattingEnabled = true;
+            this.roastListBox.ItemHeight = 16;
+            this.roastListBox.Location = new System.Drawing.Point(429, 71);
+            this.roastListBox.Name = "roastListBox";
+            this.roastListBox.Size = new System.Drawing.Size(323, 276);
+            this.roastListBox.TabIndex = 14;
+            // 
             // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 432);
+            this.Controls.Add(this.roastListBox);
             this.Controls.Add(this.recipeListBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.roastGridDisplay);
             this.Controls.Add(this.viewRoastButton);
             this.Controls.Add(this.viewRecipeButton);
             this.Controls.Add(this.newRoastButton);
@@ -150,7 +151,6 @@
             this.Name = "mainWindow";
             this.Text = "Coffee Logger";
             this.Load += new System.EventHandler(this.mainWindow_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.roastGridDisplay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,10 +164,10 @@
         private System.Windows.Forms.Button newRoastButton;
         private System.Windows.Forms.Button viewRecipeButton;
         private System.Windows.Forms.Button viewRoastButton;
-        private System.Windows.Forms.DataGridView roastGridDisplay;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox recipeListBox;
+        private System.Windows.Forms.ListBox roastListBox;
     }
 }
 
