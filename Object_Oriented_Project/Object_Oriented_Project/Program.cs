@@ -16,7 +16,7 @@ namespace Object_Oriented_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mainWindow());
+            Application.Run(new FormMain());
         }
     }
 }

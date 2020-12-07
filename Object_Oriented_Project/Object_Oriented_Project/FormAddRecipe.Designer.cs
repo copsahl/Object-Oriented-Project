@@ -37,6 +37,7 @@
             this.roastComboBox = new System.Windows.Forms.ComboBox();
             this.addButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // creamerDisplay
@@ -116,11 +117,21 @@
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(211, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 17);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Add New Recipe";
+            // 
             // FormAddRecipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(545, 380);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.roastComboBox);
@@ -149,5 +160,6 @@
         private System.Windows.Forms.ComboBox roastComboBox;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Label label5;
     }
 }

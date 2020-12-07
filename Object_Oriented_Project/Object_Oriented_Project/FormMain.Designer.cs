@@ -1,6 +1,6 @@
 ﻿namespace Object_Oriented_Project
 {
-    partial class mainWindow
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.

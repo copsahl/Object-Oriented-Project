@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Object_Oriented_Project
 {
-    public partial class mainWindow : Form
+    public partial class FormMain : Form
     {
         UserRepo MyUserRepo = new UserRepo();
         RecipeInterface MyRecipeInterface = new RecipeInterface();
         RoastInterface MyRoastInterface = new RoastInterface();
         User CurrentUser = new User();
 
-        public mainWindow()
+        public FormMain()
         {
             InitializeComponent();
         }
@@ -26,23 +26,28 @@ namespace Object_Oriented_Project
         {
             Login LoginForm = new Login(MyUserRepo);
             var result = LoginForm.ShowDialog();
-            CurrentUser = LoginForm.currUser;
-            if (result != DialogResult.OK)
+            if (result == DialogResult.OK)
             {
-                this.Close();
+                CurrentUser = LoginForm.currUser;
+                currentUserTextBox.Text = CurrentUser.Name.ToString();
+                foreach (Recipe r in CurrentUser.UserRecipes)
+                {
+                    recipeListBox.Items.Add(r.Name);
+                }
+
+                foreach (Roast r in CurrentUser.UserRoasts)
+                {
+                    roastListBox.Items.Add(r.Bean);
+                }
             }
-
-            currentUserTextBox.Text = CurrentUser.Name.ToString();
-
-            foreach(Recipe r in CurrentUser.UserRecipes)
+            else
             {
-                recipeListBox.Items.Add(r.Name);
-            }
+                Application.Exit();
 
-            foreach(Roast r in CurrentUser.UserRoasts)
-            {
-                roastListBox.Items.Add(r.Bean);
             }
+            
+
+            
 
         }
 

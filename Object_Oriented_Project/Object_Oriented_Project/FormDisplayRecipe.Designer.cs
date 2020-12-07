@@ -39,12 +39,13 @@
             this.addNoteButton = new System.Windows.Forms.Button();
             this.removeNoteButton = new System.Windows.Forms.Button();
             this.deleteRecipeButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // RecipeLabel
             // 
             this.RecipeLabel.AutoSize = true;
-            this.RecipeLabel.Location = new System.Drawing.Point(178, 45);
+            this.RecipeLabel.Location = new System.Drawing.Point(167, 41);
             this.RecipeLabel.Name = "RecipeLabel";
             this.RecipeLabel.Size = new System.Drawing.Size(66, 17);
             this.RecipeLabel.TabIndex = 2;
@@ -138,11 +139,21 @@
             this.deleteRecipeButton.UseVisualStyleBackColor = true;
             this.deleteRecipeButton.Click += new System.EventHandler(this.deleteRecipeButton_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(63, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 17);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Name:";
+            // 
             // FormDisplayRecipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 544);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.deleteRecipeButton);
             this.Controls.Add(this.removeNoteButton);
             this.Controls.Add(this.addNoteButton);
@@ -175,5 +186,6 @@
         private System.Windows.Forms.Button addNoteButton;
         private System.Windows.Forms.Button removeNoteButton;
         private System.Windows.Forms.Button deleteRecipeButton;
+        private System.Windows.Forms.Label label2;
     }
 }

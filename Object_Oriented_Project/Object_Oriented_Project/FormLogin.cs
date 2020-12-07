@@ -22,17 +22,19 @@ namespace Object_Oriented_Project
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            Application.Exit();
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
-            
+            passwordInput.UseSystemPasswordChar = Enabled;
 
         }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.None;
+
             if (MyUserRepo.Login(usernameInput.Text, passwordInput.Text))
             {
                 this.DialogResult = DialogResult.OK;
