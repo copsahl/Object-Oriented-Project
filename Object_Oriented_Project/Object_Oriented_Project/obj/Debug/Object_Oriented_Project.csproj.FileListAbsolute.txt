@@ -10,3 +10,4 @@ C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Obje
 C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.csproj.CoreCompileInputs.cache
 C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.exe
 C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.pdb
+C:\Users\cjops\Source\Repos\Object-Oriented-Project\Object_Oriented_Project\Object_Oriented_Project\obj\Debug\Object_Oriented_Project.FormDisplayRecipe.resources

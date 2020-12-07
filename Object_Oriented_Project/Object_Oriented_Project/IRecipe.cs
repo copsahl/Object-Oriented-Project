@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Object_Oriented_Project
 {
-    public interface IUserRepo
+    public interface IRecipe
     {
-        bool Login(string Username, string password);
-        List<User> GetAll();
+        Recipe GetRecipeByName(List<Recipe> Recipes, string name);
 
+        List<string> GetAllNotes(List<Note> NoteList);
     }
 }

@@ -8,7 +8,6 @@ namespace Object_Oriented_Project
 {
     public class Roast
     {
-        public int UserIdAssociation { get; set; }
         public string Bean { get; set; }
         public int RoastTimeMinutes { get; set; }
         public int RoastAmountCups { get; set; }

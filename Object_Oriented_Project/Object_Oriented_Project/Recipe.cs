@@ -8,10 +8,9 @@ namespace Object_Oriented_Project
 {
     public class Recipe
     {
-        public int UserIdAssociation { get; set; }
-        public int Id { get; set; }
         public string Name { get; set; }
         public string RoastUsed { get; set; }
+        public string CreamerUsed { get; set; }
 
         public Note RecipeNotes { get; set; }
     }

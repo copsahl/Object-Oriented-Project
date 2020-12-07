@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.newRecipeButton = new System.Windows.Forms.Button();
-            this.recipeGridDisplay = new System.Windows.Forms.DataGridView();
             this.currentUserLabel = new System.Windows.Forms.Label();
             this.currentUserTextBox = new System.Windows.Forms.TextBox();
             this.newRoastButton = new System.Windows.Forms.Button();
@@ -38,7 +37,7 @@
             this.roastGridDisplay = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.recipeGridDisplay)).BeginInit();
+            this.recipeListBox = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.roastGridDisplay)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,17 +49,6 @@
             this.newRecipeButton.TabIndex = 0;
             this.newRecipeButton.Text = "New Recipe";
             this.newRecipeButton.UseVisualStyleBackColor = true;
-            // 
-            // recipeGridDisplay
-            // 
-            this.recipeGridDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.recipeGridDisplay.Location = new System.Drawing.Point(12, 71);
-            this.recipeGridDisplay.Name = "recipeGridDisplay";
-            this.recipeGridDisplay.RowHeadersWidth = 51;
-            this.recipeGridDisplay.RowTemplate.Height = 24;
-            this.recipeGridDisplay.Size = new System.Drawing.Size(323, 259);
-            this.recipeGridDisplay.TabIndex = 3;
-            this.recipeGridDisplay.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridDisplay_CellContentClick);
             // 
             // currentUserLabel
             // 
@@ -95,6 +83,7 @@
             this.viewRecipeButton.TabIndex = 8;
             this.viewRecipeButton.Text = "View Recipe";
             this.viewRecipeButton.UseVisualStyleBackColor = true;
+            this.viewRecipeButton.Click += new System.EventHandler(this.viewRecipeButton_Click);
             // 
             // viewRoastButton
             // 
@@ -133,11 +122,21 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Roast(s)";
             // 
+            // recipeListBox
+            // 
+            this.recipeListBox.FormattingEnabled = true;
+            this.recipeListBox.ItemHeight = 16;
+            this.recipeListBox.Location = new System.Drawing.Point(12, 71);
+            this.recipeListBox.Name = "recipeListBox";
+            this.recipeListBox.Size = new System.Drawing.Size(323, 276);
+            this.recipeListBox.TabIndex = 13;
+            // 
             // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 432);
+            this.Controls.Add(this.recipeListBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.roastGridDisplay);
@@ -146,13 +145,11 @@
             this.Controls.Add(this.newRoastButton);
             this.Controls.Add(this.currentUserTextBox);
             this.Controls.Add(this.currentUserLabel);
-            this.Controls.Add(this.recipeGridDisplay);
             this.Controls.Add(this.newRecipeButton);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "mainWindow";
             this.Text = "Coffee Logger";
             this.Load += new System.EventHandler(this.mainWindow_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.recipeGridDisplay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roastGridDisplay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -162,7 +159,6 @@
         #endregion
 
         private System.Windows.Forms.Button newRecipeButton;
-        private System.Windows.Forms.DataGridView recipeGridDisplay;
         private System.Windows.Forms.Label currentUserLabel;
         private System.Windows.Forms.TextBox currentUserTextBox;
         private System.Windows.Forms.Button newRoastButton;
@@ -171,6 +167,7 @@
         private System.Windows.Forms.DataGridView roastGridDisplay;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox recipeListBox;
     }
 }
 

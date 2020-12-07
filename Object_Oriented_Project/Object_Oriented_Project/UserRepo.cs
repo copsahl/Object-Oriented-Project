@@ -12,10 +12,10 @@ namespace Object_Oriented_Project
 
         public UserRepo()
         {
-            Roast roast1 = new Roast { UserIdAssociation = 1, Bean = "Buenos Aires Maracaturra", RoastTimeMinutes = 8, RoastAmountCups = 1, CountryOfOrigin = "Nicaragua", RoastCoolMinutes = 20 };
-            Roast roast2 = new Roast { UserIdAssociation = 1, Bean = "El Diamante Don Elvis", RoastTimeMinutes = 8, RoastAmountCups = 1, CountryOfOrigin = "Peru", RoastCoolMinutes = 15 };
-            _Users.Add(new User { Id = 1, Name = "Chase", Password = "Hello", UserRoasts = new List<Roast> { roast1 }, UserRecipes = new List<Recipe> { new Recipe { UserIdAssociation = 1, Id = 1, Name = "Super Mega Dope", RoastUsed = roast1.Bean, RecipeNotes = new Note { AssociatedRecipeId = 1, Name = "Test Note", RecipeNotes = new List<string> { "This is a test note." } } } } });
-            _Users.Add(item: new User { Id = 2, Name = "Jason", Password = "Hello", UserRoasts = new List<Roast> { roast2 }, UserRecipes = new List<Recipe> { new Recipe { UserIdAssociation = 1, Id = 1, Name = "Super Mega Dope", RoastUsed = roast2.Bean, RecipeNotes = new Note { AssociatedRecipeId = 1, Name = "Test Note", RecipeNotes = new List<string> { "This is a test note." } } } } });
+            Roast roast1 = new Roast { Bean = "Buenos Aires Maracaturra", RoastTimeMinutes = 8, RoastAmountCups = 1, CountryOfOrigin = "Nicaragua", RoastCoolMinutes = 20 };
+            Roast roast2 = new Roast { Bean = "El Diamante Don Elvis", RoastTimeMinutes = 8, RoastAmountCups = 1, CountryOfOrigin = "Peru", RoastCoolMinutes = 15 };
+            _Users.Add(new User { Id = 1, Name = "Chase", Password = "Hello", UserRoasts = new List<Roast> { roast1 }, UserRecipes = new List<Recipe> { new Recipe { Name = "Super Mega Dope", RoastUsed = roast1.Bean, CreamerUsed = "None", RecipeNotes = new Note { AssociatedRecipeId = 1, Name = "Test Note", RecipeNotes = new List<string>{"Mmmmm. That's pretty good!"} } } } });
+            _Users.Add(item: new User { Id = 2, Name = "Jason", Password = "Hello", UserRoasts = new List<Roast> { roast2 }, UserRecipes = new List<Recipe> { new Recipe { Name = "Super Mega Dope", RoastUsed = roast2.Bean, CreamerUsed = "French Vanilla", RecipeNotes = new Note { AssociatedRecipeId = 1, Name = "Test Note", RecipeNotes = new List<string> { "Wowza, tastes yummy!" } } } } });
         }
 
         public bool Login(string Username, string password)
